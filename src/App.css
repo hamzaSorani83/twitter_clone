@@ -1,7 +1,7 @@
 @tailwind components;
 
 @layer components {
-  .App {
-    @apply bg-white dark:bg-dim-500;
+  .Layout {
+    @apply bg-white dark:bg-dim-900 dark:text-white;
   }
 }

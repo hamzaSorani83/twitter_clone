@@ -1,0 +1,43 @@
+{
+    "links": [{
+            "name": "Topic",
+            "path": "topic"
+        },
+        {
+            "name": "Moments",
+            "path": "moments"
+        },
+        {
+            "name": "Newsletters",
+            "path": "newsletters"
+        },
+        {
+            "name": "Professionals",
+            "path": "professionals"
+        },
+        {
+            "name": "Ads",
+            "path": "ads"
+        },
+        {
+            "name": "Analytics",
+            "path": "analytics"
+        },
+        {
+            "name": "Settings",
+            "path": "settings"
+        },
+        {
+            "name": "Help",
+            "path": "help"
+        },
+        {
+            "name": "Display",
+            "path": "display"
+        },
+        {
+            "name": "Keyboard",
+            "path": "keyboard"
+        }
+    ]
+}

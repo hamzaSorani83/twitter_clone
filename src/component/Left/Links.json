@@ -1,0 +1,31 @@
+{
+    "links": [{
+            "name": "Home",
+            "path": "/"
+        },
+        {
+            "name": "Explore",
+            "path": "/Explore"
+        },
+        {
+            "name": "Notivication",
+            "path": "/Notivication"
+        },
+        {
+            "name": "Message",
+            "path": "/Message"
+        },
+        {
+            "name": "Bookmarks",
+            "path": "/Bookmarks"
+        },
+        {
+            "name": "Lists",
+            "path": "/Lists"
+        },
+        {
+            "name": "Profile",
+            "path": "/Profile"
+        }
+    ]
+}
