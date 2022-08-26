@@ -1,4 +1,3 @@
-import React, { useRef } from 'react'
 import './MoreList.css'
 import Links from './Links.json'
 
@@ -15,8 +14,10 @@ import Help from '@iconscout/react-unicons/icons/uil-question-circle'
 import Display from '@iconscout/react-unicons/icons/uil-monitor-heart-rate'
 import Keyboard from '@iconscout/react-unicons/icons/uil-accessible-icon-alt'
 
+import { Overlay } from '../'
 
-const MoreList = ({className}) => {
+
+const MoreList = ({className, isOpen, onRequestClose}) => {
   const icons = [
     { Topic: Topic },
     {  Moments:  Moments },
@@ -41,10 +42,14 @@ const MoreList = ({className}) => {
       )
     })
   };
+  
   return (
-    <div className={["Dropdown", className].join(" ")}>
-        {renderLinks()}
-    </div>
+    <>
+      <Overlay isOpen={isOpen} onRequestClose={onRequestClose} />
+      <div className={["Dropdown", className].join(" ")}>
+          {renderLinks()}
+      </div>
+    </>
   )
 }
 

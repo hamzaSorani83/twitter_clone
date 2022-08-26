@@ -1,6 +1,30 @@
-export { default as Home } from "./Home/Home";
+// Home page
+export { default as Home } from "./pages/Home/Home";
+export { default as Middle } from "./pages/Home/Middle/Middle";
+export { default as Header } from "./pages/Home/Middle/Header";
+export { default as Right } from "./pages/Home/Right/Right";
+
+// Explore page
+export { default as Explore } from "./pages/Explore/Explore";
+
+// Notifications page
+export { default as Notifications } from "./pages/Notifications/Notifications";
+
+// Messages page
+export { default as Messages } from "./pages/Messages/Messages";
+
+// Bookmarks page
+export { default as Bookmarks } from "./pages/Bookmarks/Bookmarks";
+
+// Lists page
+export { default as Lists } from "./pages/Lists/Lists";
+
+// Profile page
+export { default as Profile } from "./pages/Profile/Profile";
+
+// Globals
 export { default as Left } from "./Left/Left";
 export { default as MoreList } from "./MoreList/MoreList"
-export { default as Middle } from "./Middle/Middle";
-export { default as Header } from "./Middle/Header";
-export { default as Right } from "./Right/Right";
+export { default as TweetModal } from "./Modal/TweetModal"
+export { default as Overlay } from "./Overlay/Overlay"
+

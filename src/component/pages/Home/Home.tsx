@@ -1,11 +1,11 @@
 import React from 'react'
 import './Home.css'
-import { Left, Right, Middle } from '../'
+import { Right, Middle } from '../..'
 
 const Home = () => {
   return (
-    <div className="Home">
-      <Left />
+    <div className="Home Page">
+      {/* <Left /> */}
       <Middle />
       <Right />
     </div>

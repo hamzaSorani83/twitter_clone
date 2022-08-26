@@ -1,7 +1,0 @@
-@tailwind components;
-
-@layer components {
-  .Home {
-    @apply container mx-auto h-screen flex xl:max-w-[1200px];
-  }
-}

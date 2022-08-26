@@ -8,12 +8,12 @@
             "path": "/Explore"
         },
         {
-            "name": "Notivication",
-            "path": "/Notivication"
+            "name": "Notifications",
+            "path": "/Notifications"
         },
         {
-            "name": "Message",
-            "path": "/Message"
+            "name": "Messages",
+            "path": "/Messages"
         },
         {
             "name": "Bookmarks",

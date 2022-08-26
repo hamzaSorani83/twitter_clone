@@ -2,6 +2,45 @@
 
 @layer components {
   .Layout {
-    @apply bg-white dark:bg-dim-900 dark:text-white;
+    @apply bg-white dark:bg-dim-900 dark:text-white
+  }
+  .Container {
+    @apply container mx-auto h-screen flex xl:max-w-[1200px];
+  }
+  .Page {
+    @apply container flex;
+  }
+  .Right {
+    @apply hidden w-[30%] md:block
+  }
+  .Middle {
+    @apply  w-full xl:w-7/12 h-screen overflow-y-auto
+  }
+  .Overlay {
+    @apply absolute hidden left-0 top-0 bg-black/40 w-full h-full z-40 dark:bg-gray-900/50;
+  }
+  .Overlay.active {
+    @apply block
+  }
+  .Left {
+    @apply xl:w-1/5 w-20 h-full flex flex-col xl:pr-4;
+  }
+  .Link {
+    @apply flex mb-8 justify-center items-center xl:justify-start capitalize hover:text-blue-500 transition-colors duration-200 font-bold ;
+  }
+  .Link.active {
+    @apply  text-blue-500;
+  }
+  .LinkText {
+    @apply hidden xl:block xl:ml-4;
+  }
+  .TwitterLogo {
+    @apply p-2 rounded-full hover:bg-[#1d9bf01a] transition-colors duration-200
+  }
+  .Btn {
+    @apply w-full py-2 px-3 flex justify-center items-center bg-blue-500 text-white rounded-full 
+  }
+  .Tweet {
+    @apply mx-auto w-11 h-11 xl:w-full font-bold
   }
 }

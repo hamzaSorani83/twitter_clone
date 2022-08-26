@@ -2,7 +2,7 @@
 
 @layer components {
   .Dropdown {
-    @apply bg-white text-gray-500 transition-transform duration-300 w-72 flex absolute flex-col shadow-lg top-0 z-50 scale-0;
+    @apply bg-white dark:bg-zinc-900 dark:text-white dark:shadow dark:shadow-slate-50/10 text-gray-900 transition-transform duration-300 w-72 flex absolute flex-col shadow-lg top-0 z-50 scale-0 overflow-y-auto;
   }
   .Dropdown.active {
     @apply scale-100;
