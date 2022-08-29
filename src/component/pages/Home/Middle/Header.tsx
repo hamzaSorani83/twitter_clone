@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom'
 import { TwitterLogo } from '../../../'
 
 const Header = () => {
   return (
     <div className="Header">
-      <Link to={'#home'} >Home</Link>
+      <h4 onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}} >Home</h4>
       <TwitterLogo />
     </div>
   )

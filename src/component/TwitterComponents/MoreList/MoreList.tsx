@@ -13,11 +13,12 @@ import Settings from '@iconscout/react-unicons/icons/uil-setting'
 import Help from '@iconscout/react-unicons/icons/uil-question-circle'
 import Display from '@iconscout/react-unicons/icons/uil-monitor-heart-rate'
 import Keyboard from '@iconscout/react-unicons/icons/uil-accessible-icon-alt'
+import { useAppSelector } from '../../../app/hooks'
+import { selectShowMore } from '../../../app/features/mainReducer'
 
-import { Overlay } from '../'
-
-
-const MoreList = ({className, isOpen, onRequestClose}) => {
+const MoreList = () => {
+  const isOpen = useAppSelector(selectShowMore);
+  
   const icons = [
     { Topic: Topic },
     {  Moments:  Moments },
@@ -45,10 +46,9 @@ const MoreList = ({className, isOpen, onRequestClose}) => {
   
   return (
     <>
-      <Overlay isOpen={isOpen} onRequestClose={onRequestClose} />
-      <div className={["Dropdown", className].join(" ")}>
-          {renderLinks()}
-      </div>
+    <div className={["Dropdown", isOpen ? 'active' : null].join(" ")}>
+        {renderLinks()}
+    </div>
     </>
   )
 }

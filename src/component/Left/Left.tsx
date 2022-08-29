@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Home from "@iconscout/react-unicons/icons/uil-house-user";
 import Notifications from "@iconscout/react-unicons/icons/uil-bell";
@@ -13,19 +13,20 @@ import ArrowDown from '@iconscout/react-unicons/icons/uil-angle-down'
 import UserPhoto from '@iconscout/react-unicons/icons/uil-user-circle'
 
 
-import { MoreList, TweetModal, TwitterLogo } from "../";
+import { TwitterLogo } from "../";
 import Links from "./Links.json";
 
 import { NavLink } from "react-router-dom";
 
 import { selectUserId, selectUserName } from "../../app/features/userReducer";
-import { useAppSelector } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { selectShowMore, setShowMore, setTweetModal } from "../../app/features/mainReducer";
 
 const Left: React.FC = () => {
-  const [showMore, setShowMore] = useState(false);
-  const [tweetModal, setTweetModal] = useState(false);
   const userName = useAppSelector(selectUserName);
   const userId = useAppSelector(selectUserId);
+  const dispatch = useAppDispatch();
+  const showMore = useAppSelector(selectShowMore);
   
   const icons = [
     { Home: Home },
@@ -55,27 +56,17 @@ const Left: React.FC = () => {
   };
   
   const openMoreModal = () => {
-    setShowMore(true);
-  };
-  
-  const closeMoreModal = () => {
-    setShowMore(false);
+    dispatch(setShowMore(true));
   };
   
   const openTweetModal = () => {
-    setTweetModal(true);
-  };
-  
-  const closeTweetModal = () => {
-    setTweetModal(false);
+    dispatch(setTweetModal(true));
   };
   
   return (
     <div className="Left">
-      <div className=" ">
-      <NavLink to="/" className="Link my-4">
-        <TwitterLogo />
-      </NavLink>
+      <div>
+      <TwitterLogo className="-translate-x-2" />
       {renderLinks()}
       <button
         className={["Link", showMore ? "active" : null].join(" ")}
@@ -84,17 +75,12 @@ const Left: React.FC = () => {
         <More />
         <span className="LinkText">More</span>
       </button>
-      <MoreList
-        className={[showMore ? "active" : null]}
-        isOpen={showMore}
-        onRequestClose={closeMoreModal}
-      />
-      <button className="Btn Tweet" onClick={openTweetModal}>
+      <button className="Btn TweetBtn" onClick={openTweetModal}>
         <span className="hidden xl:block">Tweet</span>
         <span className="xl:hidden">{<Tweet />}</span>
-      </button>
-      <TweetModal isOpen={tweetModal} onRequestClose={closeTweetModal} />
-      <button className="User hover:bg-gray-200 dark:hover:bg-transparent rounded-full p-2 text-sm w-14 lg:w-full mx-auto mt-auto mb-2 flex justify-between transition duration-300 gap-x-4 items-center" >
+        </button>
+        {/* backend */}
+      <button className="User" >
         <div className="text-blue-500 text-8xl">
           <UserPhoto size="50px" />
         </div>

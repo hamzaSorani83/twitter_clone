@@ -1,5 +1,4 @@
-import React from 'react'
-import { Header, TweetBox } from '../../..'
+import { Header, TweetBox, ShowTweets, Tweet } from '../../..'
 
 
 const Middle = () => {
@@ -7,30 +6,8 @@ const Middle = () => {
     <div className='Middle'>
       <Header />
       <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
-      <TweetBox />
+      <ShowTweets />
+      <Tweet />
     </div>
   )
 }

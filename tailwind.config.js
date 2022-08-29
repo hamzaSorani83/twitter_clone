@@ -19,10 +19,16 @@ module.exports = {
                     800: "#162d40",
                     900: "#15202b",
                 },
+                Replay: "rgb(29, 155, 240)",
+                Retweet: "rgb(0, 186, 124)",
+                Like: "rgb(249, 24, 128)",
             },
             animation: {
                 "spin-fast": "spin 0.5s linear infinite",
             },
+            transitionProperty: {
+                "cubic": "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+            }
         },
     },
     plugins: [],

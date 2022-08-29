@@ -24,10 +24,13 @@ export { default as Profile } from "./pages/Profile/Profile";
 
 // Globals
 export { default as Left } from "./Left/Left";
-export { default as MoreList } from "./MoreList/MoreList"
-export { default as TweetModal } from "./Modal/TweetModal"
 export { default as Overlay } from "./Overlay/Overlay"
 
 // Twitter Components
 export {default as TweetBox } from './TwitterComponents/TweetBox'
 export {default as TwitterLogo } from './TwitterComponents/TwitterLogo'
+export {default as ShowTweets } from './TwitterComponents/ShowTweets'
+export { default as MoreList } from "./TwitterComponents/MoreList/MoreList"
+export { default as TweetModal } from "./TwitterComponents/Modal/TweetModal"
+export { default as Tweet } from "./TwitterComponents/Tweet"
+export { default as UserPhoto } from "./TwitterComponents/UserPhoto"

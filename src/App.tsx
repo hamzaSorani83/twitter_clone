@@ -1,15 +1,20 @@
-import React from 'react';
 import './App.css';
-import { Left, Home, Explore, Notifications, Messages, Bookmarks, Lists, Profile } from './component/';
+import { Left, Home, Explore, Notifications, Messages, Bookmarks,
+  Lists, Profile, TweetModal, Overlay, MoreList } from './component/';
 
 import { Routes, Route } from 'react-router-dom';
 
+
 function App() {
+  
   return (
     <div className="App ">
       <div className='Layout'>
         <div className='Container'>
           <Left />
+          <TweetModal />
+          <Overlay />
+          <MoreList />
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/Explore' element={<Explore/>} />
