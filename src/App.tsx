@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App dark">
+    <div className="App ">
       <div className='Layout'>
         <div className='Container'>
           <Left />

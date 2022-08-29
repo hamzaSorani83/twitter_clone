@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import Twitter from "@iconscout/react-unicons/icons/uil-twitter";
 import Home from "@iconscout/react-unicons/icons/uil-house-user";
 import Notifications from "@iconscout/react-unicons/icons/uil-bell";
 import Messages from "@iconscout/react-unicons/icons/uil-envelope";
@@ -14,7 +13,7 @@ import ArrowDown from '@iconscout/react-unicons/icons/uil-angle-down'
 import UserPhoto from '@iconscout/react-unicons/icons/uil-user-circle'
 
 
-import { MoreList, TweetModal } from "../";
+import { MoreList, TweetModal, TwitterLogo } from "../";
 import Links from "./Links.json";
 
 import { NavLink } from "react-router-dom";
@@ -73,10 +72,9 @@ const Left: React.FC = () => {
   
   return (
     <div className="Left">
+      <div className=" ">
       <NavLink to="/" className="Link my-4">
-        <span className="TwitterLogo">
-          <Twitter color="#1d9bf0" size="40px" />
-        </span>
+        <TwitterLogo />
       </NavLink>
       {renderLinks()}
       <button
@@ -84,7 +82,7 @@ const Left: React.FC = () => {
         onClick={openMoreModal}
       >
         <More />
-        <span className={["LinkText"].join(" ")}>More</span>
+        <span className="LinkText">More</span>
       </button>
       <MoreList
         className={[showMore ? "active" : null]}
@@ -108,6 +106,7 @@ const Left: React.FC = () => {
           <ArrowDown />
         </div>
       </button>
+      </div>
     </div>
   );
 };

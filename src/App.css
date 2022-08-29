@@ -4,43 +4,79 @@
   .Layout {
     @apply bg-white dark:bg-dim-900 dark:text-white
   }
+  
   .Container {
-    @apply container mx-auto h-screen flex xl:max-w-[1200px];
+    @apply container mx-auto h-full flex xl:max-w-[1200px];
   }
+  
   .Page {
     @apply container flex;
   }
+  
   .Right {
     @apply hidden w-[30%] md:block
   }
-  .Middle {
-    @apply  w-full xl:w-7/12 h-screen overflow-y-auto
-  }
+  
+  
   .Overlay {
     @apply absolute hidden left-0 top-0 bg-black/40 w-full h-full z-40 dark:bg-gray-900/50;
   }
   .Overlay.active {
     @apply block
   }
+  
   .Left {
-    @apply xl:w-1/5 w-20 h-full flex flex-col xl:pr-4;
+    @apply xl:w-1/4 w-24 relative flex justify-center items-center
   }
+  
+  .Left > div{
+    @apply fixed top-0 h-screen xl:pr-4 flex flex-col ;
+  }
+  
   .Link {
-    @apply flex mb-8 justify-center items-center xl:justify-start capitalize hover:text-blue-500 transition-colors duration-200 font-bold ;
+    @apply flex mb-8 justify-center items-center xl:justify-start capitalize hover:text-blue-500 transition-colors duration-200 ;
   }
   .Link.active {
-    @apply  text-blue-500;
+    @apply  text-blue-500 font-bold;
   }
   .LinkText {
-    @apply hidden xl:block xl:ml-4;
+    @apply hidden xl:block xl:ml-4 text-xl;
   }
+  
   .TwitterLogo {
-    @apply p-2 rounded-full hover:bg-[#1d9bf01a] transition-colors duration-200
+    @apply cursor-pointer p-2 rounded-full hover:bg-[#1d9bf01a] transition-colors duration-200
   }
+  
   .Btn {
     @apply w-full py-2 px-3 flex justify-center items-center bg-blue-500 text-white rounded-full 
   }
   .Tweet {
-    @apply mx-auto w-11 h-11 xl:w-full font-bold
+    @apply  w-11 h-11 xl:w-full font-bold
+  }
+  
+  .Middle {
+    @apply  w-full xl:w-7/12 min-h-full border flex flex-col border-gray-200 dark:border-dim-200
+  }
+  .Header {
+    @apply flex justify-between items-center px-4 py-3 sticky -top-0.5 bg-white/75 dark:bg-dim-900/75  backdrop-blur-md 
+  }
+  .Header a {
+    @apply text-gray-800 dark:text-gray-100 font-bold text-lg;
+  }
+  .TweetBox {
+    @apply border-b border-gray-200 dark:border-dim-200  pb-3
+  }
+  .UserImg {
+    @apply rounded-full text-blue-400
+  }
+  .TweetBox textarea {
+    @apply p-2 dark:text-white text-gray-900 w-full h-16 bg-transparent focus:outline-none resize-none
+  }
+  .TweetBox .Icons {
+    @apply flex text-blue-500 gap-2
+  }
+  .TweetBox .Icons span{
+    @apply h-10 w-10 flex justify-center items-center cursor-pointer rounded-full hover:bg-[#1d9bf01a] transition-colors duration-200
   }
 }
+

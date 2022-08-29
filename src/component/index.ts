@@ -28,3 +28,6 @@ export { default as MoreList } from "./MoreList/MoreList"
 export { default as TweetModal } from "./Modal/TweetModal"
 export { default as Overlay } from "./Overlay/Overlay"
 
+// Twitter Components
+export {default as TweetBox } from './TwitterComponents/TweetBox'
+export {default as TwitterLogo } from './TwitterComponents/TwitterLogo'
