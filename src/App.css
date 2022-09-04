@@ -15,7 +15,7 @@
   
   /*? Right start*/
   .Right {
-    @apply hidden w-[30%] md:block
+    @apply hidden w-5/12 md:block
   }
   /*? Right end*/
   
