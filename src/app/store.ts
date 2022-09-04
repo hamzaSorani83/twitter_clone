@@ -1,10 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import { mainReducer, userReducer } from './features/';
+import { mainReducer, userReducer, themeReducer } from './features/';
 
 export const store = configureStore({
   reducer: {
     main: mainReducer,
     userReducer: userReducer,
+    theme: themeReducer,
   },
 });
 

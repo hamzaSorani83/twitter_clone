@@ -1,0 +1,1 @@
+export const mode = localStorage.getItem('mode') === 'true';

@@ -1,4 +1,4 @@
-import { Header, TweetBox, ShowTweets, Tweet } from '../../..'
+import { Header, TweetBox, ShowTweets, Tweet, ModeToggler, Spinner } from '../../..'
 
 
 const Middle = () => {
@@ -8,6 +8,8 @@ const Middle = () => {
       <TweetBox />
       <ShowTweets />
       <Tweet />
+      <ModeToggler />
+      <Spinner />
     </div>
   )
 }

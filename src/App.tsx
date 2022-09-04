@@ -3,12 +3,15 @@ import { Left, Home, Explore, Notifications, Messages, Bookmarks,
   Lists, Profile, TweetModal, Overlay, MoreList } from './component/';
 
 import { Routes, Route } from 'react-router-dom';
+import { useAppSelector } from './app/hooks';
+import { selectIsDark } from './app/features/themeReducer';
 
 
 function App() {
+  const isDark = useAppSelector(selectIsDark);
   
   return (
-    <div className="App ">
+    <div className={['App', isDark ? 'dark' : ''].join(" ")}>
       <div className='Layout'>
         <div className='Container'>
           <Left />

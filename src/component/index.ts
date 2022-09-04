@@ -33,4 +33,6 @@ export {default as ShowTweets } from './TwitterComponents/ShowTweets'
 export { default as MoreList } from "./TwitterComponents/MoreList/MoreList"
 export { default as TweetModal } from "./TwitterComponents/Modal/TweetModal"
 export { default as Tweet } from "./TwitterComponents/Tweet"
-export { default as UserPhoto } from "./TwitterComponents/UserPhoto"
+export { default as UserPhoto } from "./TwitterComponents/UserPhoto"  
+export { default as ModeToggler } from "./TwitterComponents/ModeToggler"  
+export { default as Spinner } from "./TwitterComponents/Spinner"  
